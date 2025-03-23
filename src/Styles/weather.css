@@ -1,143 +1,155 @@
+/* 🌍 Default Light Mode */
 .weatherhome {
     width: 100%;
     height: 100vh;
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
     background-image: url('../assets/darkevening.jpeg');
-    
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: background 0.3s, color 0.3s;
 }
+
 
 
 .weatherheader {
-    display: flex;  
-    align-items: center; 
-    /* justify-content: space-evenly;  */
-    padding: 0 40px ; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
     width: 100%;
     height: 50px;
-    /* background-color: rgb(56, 68, 82); */
+    /* background-color: rgba(0, 0, 0, 0.7); */
 }
+
 
 .weatherabout {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 5px;
     background-color: rgba(208, 204, 204, 0.473);
     border-radius: 20px;
-    width: 9%;
+    width: 6%;
     height: 25px;
-    
-    
-}
-
-.weatherabout h3 {
-    margin: 35px;
-    color: black; 
-    
+    padding: 10px;
 }
 
  p {
-  width: 9%;
-  height: 25px;
-  /* background-color: white; */
-  color: rgb(224, 219, 219);
-  margin-top: 10px;
-  margin-left: 15px;
-  font-size: 17px;
-}
-
-.dark-mode-icon {
-    font-size: 27px;
-    color: whitesmoke; 
-    cursor: pointer; 
-    margin-left: auto; 
+    margin-left: 20px;
+    color: rgba(245, 245, 245, 0.911);
 }
 
 .search-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 5px; 
+    gap: 5px;
     background: white;
     width: 20%;
-    padding: 3px;
+    padding: 2px;
     border-radius: 5px;
-}
-
-.search-icon {
-    font-size: 16px;
-    color: rgb(212, 213, 215);
-    margin-right: 5px;
+    margin-left: 15px;
+   
+    
 }
 
 .search-input {
-    width: 140px;
-    height: 25px;
+    width: 80%;
+    height: 30px;
     border: none;
     outline: none;
     padding: 5px;
     border-radius: 5px;
+    font-size: 18px;
 }
 
 .search-button {
     height: 25px;
-    background-color: rgb(171, 166, 166);
-    color: white;
+    background-color: rgb(219, 217, 217);
+    color: rgba(84, 82, 82, 0.982);
     border: none;
     border-radius: 5px;
-    padding: 2px 15px;
+    padding: 5px 12px;
     cursor: pointer;
+    transition: background 0.3s;
 }
 
 .search-button:hover {
-    background-color: rgb(104, 102, 102);
+    background-color: rgba(39, 37, 37, 0.34);
 }
 
-.weather-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px; 
-    width: 80%;
-    max-width: 800px; 
-}
+.dark-mode-icon {
+    font-size: 27px;
+    color: rgba(237, 234, 234, 0.621); 
+    cursor: pointer; 
+    margin-left: auto; 
+}   
+
+
+
 
 .weatherinfo {
     width: 50%;
     height: 70%;
-    /* background-image: linear-gradient(rgb(248, 149, 42), rgb(221, 180, 180),rgb(160, 160, 236));  */
     background-color: rgba(12, 9, 9, 0.5);
     opacity: 0.9;
-    margin-top: 100px;
-      
+    margin-top: 90px;
+    text-align: center;
+    padding: 50px;
+    border-radius: 10px;
 }
 
+
 .weatherforecast {
-    width: 50%;
-    height: 100%;
-    background-color: rgba(12, 9, 9, 0.5);
-    display: flex;
-    justify-content: center;
+    padding: 20px;
+    font-size: 18px;
 }
+
 
 .weathericons {
     display: flex;
-    align-items: center;  
-    gap: 10px;  
-    margin-bottom: 190px;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    color: grey;
+    font-size: 25px;
 }
 
-.weathericon {
-    color: rgb(177, 175, 175);
-    font-size: 65px;
+.placeholder p {
+    color: rgb(250, 235, 235);
 }
 
-.temperature {
-    font-size: 50px;
-    color: rgb(249, 244, 244);
-    margin: 0;
+.animate-fade-in {
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-icon {
+    animation: rotateIcon 2s linear infinite;
+}
+
+@keyframes rotateIcon {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 5px solid rgba(5, 4, 4, 0.635);
+    border-left-color: rgb(216, 211, 211);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
